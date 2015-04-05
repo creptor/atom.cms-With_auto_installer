@@ -1,0 +1,47 @@
+<div id="callback"></div>
+<div id="database-form" class="form-table">
+<form class="form" action="installfunctions/dbcreate.php" method="post" data-alert="connecting">
+    <p>Now you must enter the connection details of your database. If you are unsure of this information please contact your hosting provider.</p>
+    <div class="tr">
+        <div class="th">
+            <label>Host:</label>
+        </div>
+        <div class="td">
+            <input type="text" name="dbhost" value="localhost" placeholder="localhost">
+        </div>
+    </div>
+    <div class="tr">
+        <div class="th">
+            <label>Database:</label>
+        </div>
+        <div class="td">
+            <input type="text" name="dbname" value="Atom.cms" placeholder="Database">
+        <quote>If this doesn't exist it will try to create it.</quote>
+        </div>
+    </div>
+    <div class="tr">
+        <div class="th">
+            <label>User:</label>
+        </div>
+        <div class="td">
+            <input type="text" name="dbuser" placeholder="user">
+        </div>
+    </div>
+    <div class="tr">
+        <div class="th">
+            <label>Password:</label>
+        </div>
+        <div class="td">
+            <input type="text" name="dbpass" placeholder="password">
+        </div>
+    </div>
+    <div>
+        <p>If you would like to add sample data to your website, please chose the language you would like to have, or just ignore it.</p>
+        <select name="coldata"><option value="" selected>Nothing</option><option value="1">The sql table i have(mess)</option></select>
+    </div>
+    <div>
+        <input class="button" type="submit" value="Proceed">
+        <input type="hidden" class="password_hash" name="password_hash">
+    </div>
+</form>
+</div>

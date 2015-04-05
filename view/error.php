@@ -1,0 +1,1 @@
+<div id="main_body"><h1><?php echo $page['header'];?></h1><?php echo $page['body_formatted'];?></div>

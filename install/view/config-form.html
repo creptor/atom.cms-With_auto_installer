@@ -1,0 +1,43 @@
+<div id="callback"></div>
+<div id="config-form" class="form-table">
+<form class="form" action="installfunctions/configPage.php" method="post" data-alert="Processing">
+    <p>Now you have to insert the page details and what your user will be. This data you will be able to change it later.</p>
+    <div class="tr">
+        <div class="th">
+            <label>Web title:</label>
+        </div>
+        <div class="td">
+            <input type="text" name="wbTitle" placeholder="Website title">
+        </div>
+    </div>
+    <div class="tr">
+        <div class="th">
+            <label>Name:</label>
+        </div>
+        <div class="td">
+            <input type="text" name="usName" placeholder="Your name">
+        </div>
+    </div>
+    <div class="tr">
+        <div class="th">
+            <label>Email:</label>
+        </div>
+        <div class="td">
+            <input type="email" name="usEmail" placeholder="email@example.com">
+        </div>
+    </div>
+    <div class="tr">
+        <div class="th">
+            <label>Password:</label>
+        </div>
+        <div class="td">
+            <input id="passUser" class="password_strengh" type="password" name="usPassword" placeholder="Password">
+            <input type="password" name="usPasswordv" placeholder="Password">
+        </div>
+    </div>
+    <div>
+        <input class="button" type="submit" value="Proceed">
+        <input type="hidden" class="password_hash" name="password_hash">
+    </div>
+</form>
+</div>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="FacebookAuthorizationException.php" server="ftp.byethost16.com//htdocs/" local="130656581929837574" remote="130656513000000000" Dst="2" />
+<file name="FacebookCanvasLoginHelper.php" server="ftp.byethost16.com//htdocs/" local="130656581930047669" remote="130656513000000000" Dst="2" />
+<file name="FacebookClientException.php" server="ftp.byethost16.com//htdocs/" local="130656581930177751" remote="130656513000000000" Dst="2" />
+<file name="FacebookJavaScriptLoginHelper.php" server="ftp.byethost16.com//htdocs/" local="130656581930307869" remote="130656513000000000" Dst="2" />
+<file name="FacebookOtherException.php" server="ftp.byethost16.com//htdocs/" local="130656581930397905" remote="130656513000000000" Dst="2" />
+<file name="FacebookPageTabHelper.php" server="ftp.byethost16.com//htdocs/" local="130656581930487984" remote="130656513000000000" Dst="2" />
+<file name="FacebookPermissionException.php" server="ftp.byethost16.com//htdocs/" local="130656581930578024" remote="130656513000000000" Dst="2" />
+<file name="FacebookRedirectLoginHelper.php" server="ftp.byethost16.com//htdocs/" local="130656581930678079" remote="130656513000000000" Dst="2" />
+<file name="FacebookRequest.php" server="ftp.byethost16.com//htdocs/" local="130656581930778157" remote="130656513000000000" Dst="2" />
+<file name="FacebookRequestException.php" server="ftp.byethost16.com//htdocs/" local="130656581930868205" remote="130656513000000000" Dst="2" />
+<file name="FacebookResponse.php" server="ftp.byethost16.com//htdocs/" local="130656581930968271" remote="130656513000000000" Dst="2" />
+<file name="FacebookSDKException.php" server="ftp.byethost16.com//htdocs/" local="130656581931048336" remote="130656513000000000" Dst="2" />
+<file name="FacebookServerException.php" server="ftp.byethost16.com//htdocs/" local="130656581931138419" remote="130656513000000000" Dst="2" />
+<file name="FacebookSession.php" server="ftp.byethost16.com//htdocs/" local="130656581931248464" remote="130656513000000000" Dst="2" />
+<file name="FacebookSignedRequestFromInputHelper.php" server="ftp.byethost16.com//htdocs/" local="130656581931348522" remote="130656513000000000" Dst="2" />
+<file name="FacebookThrottleException.php" server="ftp.byethost16.com//htdocs/" local="130656581931438582" remote="130656513000000000" Dst="2" />
+<file name="GraphAlbum.php" server="ftp.byethost16.com//htdocs/" local="130656581931788972" remote="130656513000000000" Dst="2" />
+<file name="GraphLocation.php" server="ftp.byethost16.com//htdocs/" local="130656581931879004" remote="130656513000000000" Dst="2" />
+<file name="GraphObject.php" server="ftp.byethost16.com//htdocs/" local="130656581932109168" remote="130656513000000000" Dst="2" />
+<file name="GraphPage.php" server="ftp.byethost16.com//htdocs/" local="130656581932209218" remote="130656513000000000" Dst="2" />
+<file name="GraphSessionInfo.php" server="ftp.byethost16.com//htdocs/" local="130656581932299294" remote="130656513000000000" Dst="2" />
+<file name="GraphUser.php" server="ftp.byethost16.com//htdocs/" local="130656581932399344" remote="130656513000000000" Dst="2" />
+<file name="GraphUserPage.php" server="ftp.byethost16.com//htdocs/" local="130656581932669523" remote="130656513000000000" Dst="2" />
+</dwsync>
