@@ -6,7 +6,7 @@
 	header('Expires: 60'); // Proxies.
 	//session
 	session_start();
-	if(file_exists($_SERVER["DOCUMENT_ROOT"].'/password.txt')){
+	if(!file_exists($_SERVER["DOCUMENT_ROOT"].'config/dbconnection.php')){
 		header("Location: install");
 	}
 	//mysql conection:
