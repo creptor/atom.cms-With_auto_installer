@@ -40,11 +40,11 @@ if(!write_ini_file($sampleData,'dbdata.ini',true)){
 }
 $somecontent='<?php $host="'.$dbhost.'";$database="'.$dbname.'";$user="'.$dbuser.'";$password="'.$dbpass.'";$dbc=mysqli_connect($host,$user,$password,$database)or die(\'<!DOCTYPE HTML><head><meta charset="UTF-8"></head><html lang="es"><body><h1>could not connect to the server</h1></body></html>\');?>';
 if(!$handle=fopen($filename,'w')){
-	$output=json_encode(array('type'=>'error','text'=>'Cannot create file ($filename).'));
+	$output=json_encode(array('type'=>'error','text'=>"Cannot create file ($filename)."));
 	die($output);
 }else{
     if(fwrite($handle,$somecontent)===FALSE){
-		$output=json_encode(array('type'=>'error','text'=>'Cannot write to file ($filename).'));
+		$output=json_encode(array('type'=>'error','text'=>"Cannot write to file ($filename), check the permissions."));
 		die($output);
     }else{
 		$output=json_encode(array('type'=>'success','proceed'=>'installfunctions/dbpopulate.php','ralert'=>'synchronizing data'));
