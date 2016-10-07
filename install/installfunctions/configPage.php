@@ -1,6 +1,8 @@
 <?php
 session_start();
 include'functions.php';
+
+//checks the password
 if($_POST['password_hash']==NULL){
 	$output=json_encode(array('type'=>'error','text'=>"There's something not right with your entry, please go back."));
 	die($output);
@@ -14,6 +16,8 @@ if($_POST['password_hash']==NULL){
 		die($output);
 	}
 }
+
+//read previusly saved data
 if(!$array_ini=parse_ini_file("dbdata.ini")){
 	$output=json_encode(array('type'=>'error','text'=>"Can't correctly pass data, please try again."));
 	die($output);
@@ -22,11 +26,14 @@ $dbhost=$array_ini['host'];
 $dbname=$array_ini['database'];
 $dbuser=$array_ini['user'];
 $dbpass=$array_ini['password'];
+
 $conn=new mysqli($dbhost,$dbuser,$dbpass,$dbname);
 if($conn->connect_error){
 	$output=json_encode(array('type'=>'error','text'=>'Connection failed: '.$conn->connect_error));
 	die($output);
 }
+
+//checks the parameters inputed by the form
 $verify=false;
 $email=prepare_fetch($_POST['usEmail'],'m');
 if(isset($email['error'])){
@@ -56,6 +63,8 @@ if($password!=NULL||$repeat_password!=NULL){
 	$output=json_encode(array('type'=>'error','text'=>"There's a blank password."));
 	die($output);
 }
+
+//Upload initial page configuration to the database
 if(!$conn->query("INSERT INTO settings (id, label, value) VALUES ('nombre_pagina', 'Titulo de la pagina', '$wbTitle') ON DUPLICATE KEY UPDATE value = '$wbTitle'")){
 	$output=json_encode(array('type'=>'error','text'=>'Error updating the data: '.$conn->error));
 	die($output);

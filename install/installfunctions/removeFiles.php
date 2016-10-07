@@ -1,6 +1,7 @@
 <?php
 session_start();
 include'functions.php';
+//Checks the password
 if($_POST['password_hash']==NULL){
 	$output=json_encode(array('type'=>'error','text'=>"There's something not right with your entry, please go back."));
 	die($output);
@@ -14,27 +15,8 @@ if($_POST['password_hash']==NULL){
 		die($output);
 	}
 }
-function rm_r($dir){
-    if(false===file_exists($dir)){
-        return false;
-    }
-    $files=new RecursiveIteratorIterator(
-        new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS),
-        RecursiveIteratorIterator::CHILD_FIRST
-    );
-    foreach($files as $fileinfo){
-        if($fileinfo->isDir()){
-            if(false === rmdir($fileinfo->getRealPath())){
-                return false;
-            }
-        }else{
-            if(false===unlink($fileinfo->getRealPath())){
-                return false;
-            }
-        }
-    }
-    return rmdir($dir);
-}
+
+//Remove password.txt file
 if(!unlink($_SERVER["DOCUMENT_ROOT"].'/password.txt')){
 	$output=json_encode(array('type'=>'error','text'=>'An error ocurred.'));
 	die($output);

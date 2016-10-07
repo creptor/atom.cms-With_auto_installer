@@ -66,4 +66,25 @@ function deleteDir($path){
     }
     return is_file($path) ? @unlink($path) : array_map(__FUNCTION__, glob($path.'/*')) == @rmdir($path);
 }
+function rm_r($dir){
+    if(false===file_exists($dir)){
+        return false;
+    }
+    $files=new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS),
+        RecursiveIteratorIterator::CHILD_FIRST
+    );
+    foreach($files as $fileinfo){
+        if($fileinfo->isDir()){
+            if(false === rmdir($fileinfo->getRealPath())){
+                return false;
+            }
+        }else{
+            if(false===unlink($fileinfo->getRealPath())){
+                return false;
+            }
+        }
+    }
+    return rmdir($dir);
+}
 ?>

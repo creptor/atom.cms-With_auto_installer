@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+//Password to use the install system (experimental)
 if($_POST['allow']==NULL){
 	$output=json_encode(array('type'=>'error','text'=>"You left the password blank."));
 	die($output);
